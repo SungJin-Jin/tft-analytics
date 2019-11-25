@@ -1,6 +1,6 @@
 # TFT Analytics
 
-> This is a TFT anayltics service a for gamers.
+> This is a TFT analytics service for gamers.
 
 ### Client
 - React
