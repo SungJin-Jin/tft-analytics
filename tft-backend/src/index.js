@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config(); // .env 파일에서 환경변수 불러오기
 
 const Koa = require('koa');
 const Router = require('koa-router');
@@ -7,14 +7,14 @@ const app = new Koa();
 const router = new Router();
 const api = require('./api');
 
-const moongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-moongoose.Promise = global.Promise;
-moongoose.connect(process.env.MONGO_URI, {
-    useMongoClient: true
+mongoose.Promise = global.Promise;
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true
 }).then(() => {
     console.log('Successfully connected to mongodb');
-}).catch((e) => {
+}).catch(e => {
     console.error(e);
 });
 

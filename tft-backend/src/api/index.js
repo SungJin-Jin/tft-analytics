@@ -4,6 +4,6 @@ const rank = require('./rank');
 
 const api = new Router();
 
-api.use('rank', rank.routes());
+api.use('/rank', rank.routes());
 
 module.exports = api;
