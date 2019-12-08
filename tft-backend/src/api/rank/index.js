@@ -4,6 +4,6 @@ const rankCtrl = require('./rank.ctrl');
 
 const rank = new Router();
 
-rank.get('/', rankCtrl.list);
+rank.get('/', rankCtrl.today);
 
 module.exports = rank;
