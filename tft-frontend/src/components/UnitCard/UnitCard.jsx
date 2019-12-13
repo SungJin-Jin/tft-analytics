@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardBody, CardFooter, CardImg, Button} from "reactstrap";
+import {Button, Card, CardBody, CardFooter, CardImg} from "reactstrap";
 
 class UnitCard extends React.Component {
 
@@ -23,7 +23,7 @@ class UnitCard extends React.Component {
                         <p className="description">{this.props.name}</p>
                     </div>
                     <div className="card-description text-center">
-                       Tier : {this.props.tier}
+                        Tier : {this.props.tier}
                     </div>
                 </CardBody>
                 <CardFooter className="card-footer">
@@ -43,10 +43,12 @@ class UnitCard extends React.Component {
 }
 
 UnitCard.defaultProps = {
-  image: "",
-  rank: 0,
-  name: "NONE",
-  tier: 0
+    name: "NONE",
+    class: [],
+    origin: [],
+    image: "",
+    rank: 0,
+    tier: 0
 };
 
 export default UnitCard;

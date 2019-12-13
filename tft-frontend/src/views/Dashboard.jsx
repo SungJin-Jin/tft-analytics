@@ -1,68 +1,51 @@
 import React from "react";
 
 import {Col, Row} from "reactstrap";
-import UnitCard from "./UnitCard";
+import UnitCard from "../components/UnitCard/UnitCard";
+import {api} from "../shared/http"
 
 class Dashboard extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {units: []};
+    }
 
-  render() {
-    return (
-        <>
-          <div className="content">
-            <Row>
-              <Col xs="6">
-                <UnitCard rank="1" name="KogMaw" tier="1"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="6">
-                <UnitCard rank="2" name="Taric" tier="5"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs="3">
-                <UnitCard rank="3" name="Olaf" tier="4"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="4" name="Warwick" tier="1"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="5" name="DrMundo" tier="3"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="6" name="Singed" tier="5"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-            </Row>
-            <Row>
-              <Col xs="3">
-                <UnitCard rank="7" name="Skarner" tier="2"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="8" name="Volibear" tier="2"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="9" name="MasterYi" tier="5"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-              <Col xs="3">
-                <UnitCard rank="10" name="Annie" tier="4"
-                          image="https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"/>
-              </Col>
-            </Row>
-          </div>
-        </>
-    );
-  }
+    async componentDidMount() {
+        let {data: units} = await api.get("/rank");
+        this.setState({units});
+    }
+
+    render() {
+        const {units} = this.state;
+
+        if (units.length === 0) return <div/>;
+
+        return (
+            <div className="content">
+                <Row>
+                    {this.state.units.slice(0, 2).map((unit, index) =>
+                        <Col xs="6">
+                            <UnitCard rank={index + 1} name={unit.name} tier={unit.tier} image={unit.image}/>
+                        </Col>
+                    )}
+                </Row>
+                <Row>
+                    {this.state.units.slice(2, 6).map((unit, index) =>
+                        <Col xs="3">
+                            <UnitCard rank={index + 3} name={unit.name} tier={unit.tier} image={unit.image}/>
+                        </Col>
+                    )}
+                </Row>
+                <Row>
+                    {this.state.units.slice(6, 10).map((unit, index) =>
+                        <Col xs="3">
+                            <UnitCard rank={index + 7} name={unit.name} tier={unit.tier} image={unit.image}/>
+                        </Col>
+                    )}
+                </Row>
+            </div>
+        );
+    }
 }
 
 export default Dashboard;
