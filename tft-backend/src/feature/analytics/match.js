@@ -1,5 +1,3 @@
-const Sugar = require('sugar');
-
 const process = (matches) => {
     let topUnits = matchesToTopUnits(matches);
 

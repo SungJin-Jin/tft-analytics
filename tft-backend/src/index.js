@@ -2,6 +2,8 @@ require('dotenv').config(); // .env 파일에서 환경변수 불러오기
 
 const Koa = require('koa');
 const Router = require('koa-router');
+const bodyParser = require('koa-bodyparser');
+const cors = require('koa-cors');
 
 const app = new Koa();
 const router = new Router();
@@ -22,7 +24,10 @@ const port = process.env.PORT || 4000;
 
 router.use('/api', api.routes());
 
-app.use(router.routes()).use(router.allowedMethods());
+app.use(cors())
+    .use(router.routes())
+    .use(router.allowedMethods())
+    .use(bodyParser());
 
 app.listen(port, () => {
     console.log('listening to port', port);
