@@ -1,0 +1,655 @@
+[
+  {
+    "name": "Nasus",
+    "tier": 1,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Fury of the Dawn",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/5/53/Nasus_Lunar_Guardian_Render.png/revision/latest/scale-to-width-down/282?cb=20191206182418"
+  },
+  {
+    "name": "Maokai",
+    "tier": 1,
+    "origin": [
+      "Woodland"
+    ],
+    "class": [
+      "Druid"
+    ],
+    "ability": "Fury of the Sands",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/a/ab/Maokai_Render.png/revision/latest/scale-to-width-down/252?cb=20181117002546"
+  },
+  {
+    "name": "Kogmaw",
+    "tier": 1,
+    "origin": [
+      "Poison"
+    ],
+    "class": [
+      "Predator"
+    ],
+    "ability": "Living Artillery",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/f/f6/Kog%27Maw_Caterpillar_Render.png/revision/latest/scale-to-width-down/171?cb=20191109005334"
+  },
+  {
+    "name": "Diana",
+    "tier": 1,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "ability": "Flame Cascade",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/9/9d/Diana_Infernal_Render.png/revision/latest/scale-to-width-down/227?cb=20191109172635"
+  },
+  {
+    "name": "Ivern",
+    "tier": 1,
+    "origin": [
+      "Woodland"
+    ],
+    "class": [
+      "Druid"
+    ],
+    "ability": "Triggerseed",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/a/af/Ivern_Render.png/revision/latest/scale-to-width-down/146?cb=20181118183228"
+  },
+  {
+    "name": "Ornn",
+    "tier": 1,
+    "origin": [
+      "Electric"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Lightning Breath",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/0/0e/Ornn_Thunder_Lord_Render.png/revision/latest/scale-to-width-down/269?cb=20191209071928"
+  },
+  {
+    "name": "Renekton",
+    "tier": 1,
+    "origin": [
+      "Desert"
+    ],
+    "class": [
+      "Berserker"
+    ],
+    "ability": "Cull the Meek",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/a/ae/Renekton_Render.png/revision/latest/scale-to-width-down/260?cb=20140827012526"
+  },
+  {
+    "name": "Vayne",
+    "tier": 1,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Silver Bolts",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/b/bf/Vayne_Arclight_Render.png/revision/latest/scale-to-width-down/261?cb=20190713161546"
+  },
+  {
+    "name": "Taliyah",
+    "tier": 1,
+    "origin": [
+      "Mountain"
+    ],
+    "class": [
+      "Mage"
+    ],
+    "ability": "Seismic Shove",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4d/Taliyah_Render.png/revision/latest/scale-to-width-down/119?cb=20181118032245"
+  },
+  {
+    "name": "Vladimir",
+    "tier": 1,
+    "origin": [
+      "Ocean"
+    ],
+    "class": [
+      "Mage"
+    ],
+    "ability": "Drain",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/c/c7/Vladimir_Dark_Waters_Render.png/revision/latest/scale-to-width-down/268?cb=20191209072110"
+  },
+  {
+    "name": "Warwick",
+    "tier": 1,
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Predator"
+    ],
+    "ability": "Infinite Duress",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/3/3b/Warwick_Tundra_Hunter_Render.png/revision/latest/scale-to-width-down/283?cb=20191209072120"
+  },
+  {
+    "name": "Zyra",
+    "tier": 1,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Summoner"
+    ],
+    "ability": "Rampant Growth",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/f/f4/Zyra_Wildfire_Render.png/revision/latest/scale-to-width-down/145?cb=20191209072140"
+  },
+  {
+    "name": "Thresh",
+    "tier": 2,
+    "origin": [
+      "Ocean"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Deep Sea Lantern",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/d/d4/Thresh_Deep_Terror_Render.png/revision/latest/scale-to-width-down/209?cb=20191209072042"
+  },
+  {
+    "name": "Varus",
+    "tier": 2,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Piercing Arrow",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/77/Varus_Infernal_Render.png/revision/latest/scale-to-width-down/312?cb=20191209072057"
+  },
+  {
+    "name": "RekSai",
+    "tier": 2,
+    "origin": [
+      "Steel"
+    ],
+    "class": [
+      "Predator"
+    ],
+    "ability": "Furious Bite",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/9/97/Rek%27Sai_Eternum_Render.png/revision/latest/scale-to-width-down/262?cb=20191209071946"
+  },
+  {
+    "name": "Senna",
+    "tier": 2,
+    "origin": [
+      "Shadow"
+    ],
+    "class": [
+      "Soulbound"
+    ],
+    "ability": "Piercing Darkness",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/3/33/Senna_Render.png/revision/latest/scale-to-width-down/241?cb=20191101010332"
+  },
+  {
+    "name": "Skarner",
+    "tier": 2,
+    "origin": [
+      "Crystal"
+    ],
+    "class": [
+      "Predator"
+    ],
+    "ability": "Crystalline Exoskeleton",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/6/62/Skarner_Render.png/revision/latest/scale-to-width-down/421?cb=20181110204111"
+  },
+  {
+    "name": "Syndra",
+    "tier": 2,
+    "origin": [
+      "Ocean"
+    ],
+    "class": [
+      "Mage"
+    ],
+    "ability": "Hydro Sphere",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/8d/Syndra_Atlantean_Render.png/revision/latest/scale-to-width-down/130?cb=20191209072025"
+  },
+  {
+    "name": "Jax",
+    "tier": 2,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Berserker"
+    ],
+    "ability": "Counter Strike",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/81/Jax_God_Staff_Render.png/revision/latest/scale-to-width-down/206?cb=20191109170341"
+  },
+  {
+    "name": "Braum",
+    "tier": 2,
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Unbreakable",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/d/d5/Braum_Render.png/revision/latest/scale-to-width-down/147?cb=20181219215400"
+  },
+  {
+    "name": "LeBlanc",
+    "tier": 2,
+    "origin": [
+      "Woodland"
+    ],
+    "class": [
+      "Assassin",
+      "Mage"
+    ],
+    "ability": "Ethereal Chain",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/9/9b/LeBlanc_Elderwood_Render.png/revision/latest/scale-to-width-down/178?cb=20191109212327"
+  },
+  {
+    "name": "Malzahar",
+    "tier": 2,
+    "origin": [
+      "Shadow"
+    ],
+    "class": [
+      "Summoner"
+    ],
+    "ability": "Shadow Swarm",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/6/69/Malzahar_Overlord_Render.png/revision/latest/scale-to-width-down/111?cb=20191109213145"
+  },
+  {
+    "name": "Neeko",
+    "tier": 2,
+    "origin": [
+      "Woodland"
+    ],
+    "class": [
+      "Druid"
+    ],
+    "ability": "Blooming Burst",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/f/fd/Neeko_Render.png/revision/latest/scale-to-width-down/107?cb=20181120012258"
+  },
+  {
+    "name": "Volibear",
+    "tier": 2,
+    "origin": [
+      "Glacial",
+      "Electric"
+    ],
+    "class": [
+      "Druid"
+    ],
+    "ability": "Frenzied Bite",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/88/Volibear_Render.png/revision/latest/scale-to-width-down/217?cb=20190111202021"
+  },
+  {
+    "name": "Yasuo",
+    "tier": 2,
+    "origin": [
+      "Cloud"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "ability": "Last Breath",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/c/c9/Yasuo_Render.png/revision/latest/scale-to-width-down/133?cb=20190112030034"
+  },
+  {
+    "name": "Nocturne",
+    "tier": 3,
+    "origin": [
+      "Steel"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "ability": "Steel Blades",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/2/2a/Nocturne_Eternum_Render.png/revision/latest/scale-to-width-down/301?cb=20191206183106"
+  },
+  {
+    "name": "Sion",
+    "tier": 3,
+    "origin": [
+      "Shadow"
+    ],
+    "class": [
+      "Berserker"
+    ],
+    "ability": "Decimating Smash",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/71/Sion_Warmonger_Render.png/revision/latest/scale-to-width-down/247?cb=20191209072001"
+  },
+  {
+    "name": "Sivir",
+    "tier": 3,
+    "origin": [
+      "Desert"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "ability": "Ricochet",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4e/Sivir_Render.png/revision/latest/scale-to-width-down/160?cb=20181219210020"
+  },
+  {
+    "name": "Soraka",
+    "tier": 3,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Mystic"
+    ],
+    "ability": "Equinox",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4d/Soraka_Celestine_Render.png/revision/latest/scale-to-width-down/240?cb=20191209072012"
+  },
+  {
+    "name": "Ezreal",
+    "tier": 3,
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Ice Shot",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/d/d9/Ezreal_Frosted_Render.png/revision/latest/scale-to-width-down/118?cb=20181126220133"
+  },
+  {
+    "name": "DrMundo",
+    "tier": 3,
+    "origin": [
+      "Poison"
+    ],
+    "class": [
+      "Berserker"
+    ],
+    "ability": "Adrenaline Rush",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/5/54/Dr._Mundo_Toxic_Render.png/revision/latest/scale-to-width-down/202?cb=20191109001854"
+  },
+  {
+    "name": "Aatrox",
+    "tier": 3,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Blademaster"
+    ],
+    "ability": "The Arclight Blade",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/5/5e/Aatrox_Justicar_Render.png/revision/latest/scale-to-width-down/132?cb=20191109211009"
+  },
+  {
+    "name": "Azir",
+    "tier": 3,
+    "origin": [
+      "Desert"
+    ],
+    "class": [
+      "Summoner"
+    ],
+    "ability": "Arise!",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/d/d6/Azir_Render.png/revision/latest/scale-to-width-down/261?cb=20181110231930"
+  },
+  {
+    "name": "Kindred",
+    "tier": 3,
+    "origin": [
+      "Shadow",
+      "Inferno"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Dance of Dread",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/0/07/Kindred_Shadowfire_Render.png/revision/latest/scale-to-width-down/217?cb=20191209071848"
+  },
+  {
+    "name": "Nautilus",
+    "tier": 3,
+    "origin": [
+      "Ocean"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Depth Charge",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/1/13/Nautilus_Render.png/revision/latest/scale-to-width-down/173?cb=20190111233236"
+  },
+  {
+    "name": "Veigar",
+    "tier": 3,
+    "origin": [
+      "Shadow"
+    ],
+    "class": [
+      "Mage"
+    ],
+    "ability": "Primordial Burst",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/74/Veigar_Render.png/revision/latest/scale-to-width-down/151?cb=20190111204310"
+  },
+  {
+    "name": "Qiyana",
+    "tier": 3,
+    "origin": [
+      "Variable"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "ability": "Elemental Blade",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/78/Qiyana_Render.png/revision/latest/scale-to-width-down/200?cb=20190627003759"
+  },
+  {
+    "name": "Twitch",
+    "tier": 4,
+    "origin": [
+      "Poison"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Spray and Pray",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4a/Twitch_Render.png/revision/latest/scale-to-width-down/255?cb=20181118025258"
+  },
+  {
+    "name": "Olaf",
+    "tier": 4,
+    "origin": [
+      "Glacial"
+    ],
+    "class": [
+      "Berserker"
+    ],
+    "ability": "Ragnarok",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/6/68/Olaf_Glacial_Render.png/revision/latest/scale-to-width-down/211?cb=20191206184303"
+  },
+  {
+    "name": "Janna",
+    "tier": 4,
+    "origin": [
+      "Cloud"
+    ],
+    "class": [
+      "Mystic"
+    ],
+    "ability": "Monsoon",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/49/Janna_Render.png/revision/latest/scale-to-width-down/178?cb=20190112194236"
+  },
+  {
+    "name": "Yorick",
+    "tier": 4,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Summoner"
+    ],
+    "ability": "Shepherd of Souls",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/7/74/Yorick_Arclight_Render.png/revision/latest/scale-to-width-down/229?cb=20191209044956"
+  },
+  {
+    "name": "Annie",
+    "tier": 4,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Summoner"
+    ],
+    "ability": "Tibbers!",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/c/cd/Annie_Render.png/revision/latest/scale-to-width-down/114?cb=20181110234755"
+  },
+  {
+    "name": "Malphite",
+    "tier": 4,
+    "origin": [
+      "Mountain"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Unstoppable Force",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/1/1b/Malphite_Render.png/revision/latest/scale-to-width-down/285?cb=20140807130216"
+  },
+  {
+    "name": "Lucian",
+    "tier": 4,
+    "origin": [
+      "Light"
+    ],
+    "class": [
+      "Soulbound"
+    ],
+    "ability": "The Culling",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/5/50/Lucian_Render.png/revision/latest/scale-to-width-down/87?cb=20181111002243"
+  },
+  {
+    "name": "Khazix",
+    "tier": 4,
+    "origin": [
+      "Desert"
+    ],
+    "class": [
+      "Assassin"
+    ],
+    "ability": "Arid Assault",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/8c/Kha%27Zix_Guardian_of_the_Sands_Render.png/revision/latest/scale-to-width-down/252?cb=20191109004254"
+  },
+  {
+    "name": "Ashe",
+    "tier": 4,
+    "origin": [
+      "Crystal"
+    ],
+    "class": [
+      "Ranger"
+    ],
+    "ability": "Ranger's Focus",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/44/Ashe_Amethyst_Render.png/revision/latest/scale-to-width-down/255?cb=20191109000850"
+  },
+  {
+    "name": "Brand",
+    "tier": 4,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Mage"
+    ],
+    "ability": "Pyroclasm",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/f/f1/Brand_Render.png/revision/latest/scale-to-width-down/150?cb=20170118091056"
+  },
+  {
+    "name": "Taric",
+    "tier": 5,
+    "origin": [
+      "Crystal"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Cosmic Radiance",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/8/8f/Taric_Render.png/revision/latest/scale-to-width-down/160?cb=20160405213050"
+  },
+  {
+    "name": "Singed",
+    "tier": 5,
+    "origin": [
+      "Poison"
+    ],
+    "class": [
+      "Alchemist"
+    ],
+    "ability": "Poison Trail",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/d/dc/Singed_Render.png/revision/latest/scale-to-width-down/139?cb=20190331200552"
+  },
+  {
+    "name": "Nami",
+    "tier": 5,
+    "origin": [
+      "Ocean"
+    ],
+    "class": [
+      "Mystic"
+    ],
+    "ability": "Tidal Wave",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/c/cf/Nami_Deap_Sea_Render.png/revision/latest/scale-to-width-down/336?cb=20191109220733"
+  },
+  {
+    "name": "MasterYi",
+    "tier": 5,
+    "origin": [
+      "Shadow"
+    ],
+    "class": [
+      "Mystic",
+      "Blademaster"
+    ],
+    "ability": "Meditate",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/b/ba/Master_Yi_Assassin_Render.png/revision/latest/scale-to-width-down/235?cb=20191109214254"
+  },
+  {
+    "name": "Amumu",
+    "tier": 5,
+    "origin": [
+      "Inferno"
+    ],
+    "class": [
+      "Warden"
+    ],
+    "ability": "Curse of the Sad Mummy",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/2/26/Amumu_Infernal_Render.png/revision/latest/scale-to-width-down/185?cb=20191210011018"
+  },
+  {
+    "name": "Zed",
+    "tier": 5,
+    "origin": [
+      "Electric"
+    ],
+    "class": [
+      "Assassin",
+      "Summoner"
+    ],
+    "ability": "Living Lightning",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/4/4a/Zed_Shockblade_Render.png/revision/latest/scale-to-width-down/185?cb=20191209072131"
+  },
+  {
+    "name": "Lux",
+    "tier": 7,
+    "origin": [
+      "Variable"
+    ],
+    "class": [
+      "Avatar"
+    ],
+    "ability": "Final Spark",
+    "image": "https://vignette.wikia.nocookie.net/leagueoflegends/images/2/29/Lux_Elementalist_%28Base%29.png/revision/latest/scale-to-width-down/232?cb=20180827093027"
+  }
+]
