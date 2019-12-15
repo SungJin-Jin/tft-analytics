@@ -55,9 +55,21 @@ getMatchIdsByPUUID = async function (puuid) {
 };
 
 getMatchIdsByPuuids = async function (puuids) {
-    let matchIds = await Promise.all(puuids.map(puuid => getMatchIdsByPUUID(puuid)));
+    const matchIds = await Promise.all(puuids.map(puuid => getMatchIdsByPUUID(puuid)));
     return matchIds.flatMap(matchId => matchId);
 };
 
-module.exports = {getTop100Users, getPUUIDsByUsers, getMatchIdsByPuuids};
+getMatchById = async function (matchId) {
+    const match = await ApiDefault.asia.get(`/match/v1/matches/${matchId}`, headers);
+
+    return match.data;
+};
+
+getMatchesByMatchIds = async function (matchIds) {
+    const matches = await Promise.all(matchIds.map(id => getMatchById(id)));
+
+    return matches;
+};
+
+module.exports = {getTop100Users, getPUUIDsByUsers, getMatchIdsByPuuids, getMatchesByMatchIds};
 
