@@ -1,19 +1,28 @@
-const process = (matches) => {
-    let topUnits = matchesToTopUnits(matches);
-
-    return topUnits;
+const summaryUnits = (matches) => {
+    return summaryByName(matches.flatMap(match => findTopParticipants(match).units));
 };
 
-const matchesToTopUnits = (matches) => {
-    return matches.flatMap(match => findTopParticipants(match).units);
+const summaryTraits = (matches) => {
+    return summaryByName(matches.flatMap(match => findTopParticipants(match).traits));
 };
 
-const matchesToTopTraits = (matches) => {
-    return matches.flatMap(match => findTopParticipants(match).traits);
+const summaryByName = (units) => {
+    return toSet(units.map(unit => unit.name))
+        .map(name => {
+            return {
+                name: name,
+                count: units.filter(unit => unit.name === name).length
+            }
+        })
+        .sort((a, b) => b.count - a.count);
 };
 
 const findTopParticipants = (match) => {
     return match.info.participants.find(participants => participants.placement === 1);
 };
 
-module.exports = process;
+const toSet = (array) => {
+    return Array.from(new Set(array));
+};
+
+module.exports = {summaryUnits, summaryTraits};
