@@ -1,11 +1,32 @@
-const unit = require('../../../data/meta/unit.json');
+const units = require('../../../data/meta/unit.json');
+const moment = require('moment');
+const Summary = require('models/summary');
 
-// 오늘 챌린저 100명의 10게임의 데이터(총 1000게임)을 분석한 결과 반환
+exports.today = async(ctx) => {
+    let summary;
 
-exports.today = async (ctx) => {
-    // matches 정보는 Riot API 통해서 가져와야함
-    // let matches = [match, match];
-    // ctx.body = await matchAnalytics(matches);
+    try {
+        const today = moment().startOf('day');
 
-    ctx.body = unit;
+        let summaries = await Summary.find({
+            "date": {
+                "$gte": today,
+                "$lt": moment(today).endOf('day').toDate()
+            }
+        }).sort({_id: -1})
+            .limit(1)
+            .exec();
+
+        summary = summaries[0].summary
+            .slice(0, 10)
+            .map(data => {
+                const unit = units.find(unit => unit.name === data.name);
+                unit.count = data.count;
+                return unit;
+            });
+    } catch (e) {
+        return ctx.throw(500, e);
+    }
+
+    ctx.body = summary;
 };
