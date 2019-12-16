@@ -16,7 +16,9 @@ ApiDefault.asia = axios.create({
 
 const headers = {headers: {'X-Riot-Token': ApiDefault.key}}
 
-getTop100Users = async function () {
+getTop100Users = async function() {
+    console.log(`========== getTop100Users ==========`);
+
     try {
         const challengers = await ApiDefault.korea.get(`/league/v1/challenger`, headers);
 
@@ -29,7 +31,13 @@ getTop100Users = async function () {
     }
 };
 
-getPUUIDBySummonerId = async function (encryptedSummonerId) {
+getPUUIDsByUsers = async function(topUsers) {
+    return await Promise.all(topUsers.map(user => getPUUIDBySummonerId(user.summonerId)));
+};
+
+getPUUIDBySummonerId = async function(encryptedSummonerId) {
+    console.log(`==== getPUUIDBySummonerId : ${encryptedSummonerId} ====`);
+
     try {
         const summoner = await ApiDefault.korea.get(`/summoner/v1/summoners/${encryptedSummonerId}`, headers);
 
@@ -39,11 +47,17 @@ getPUUIDBySummonerId = async function (encryptedSummonerId) {
     }
 };
 
-getPUUIDsByUsers = async function (topUsers) {
-    return await Promise.all(topUsers.map(user => getPUUIDBySummonerId(user.summonerId)));
+getMatchIdsByPuuids = async function(puuids) {
+    console.log(`========== getMatchIdsByPuuids ==========`);
+
+    const matchIds = await Promise.all(puuids.map(puuid => getMatchIdsByPUUID(puuid)));
+
+    return matchIds.flatMap(matchId => matchId);
 };
 
-getMatchIdsByPUUID = async function (puuid) {
+getMatchIdsByPUUID = async function(puuid) {
+    console.log(`==== getMatchIdsByPUUID : ${puuid} ====`);
+
     try {
         const count = 1;
         const matchIds = await ApiDefault.asia.get(`/match/v1/matches/by-puuid/${puuid}/ids?count=${count}`, headers);
@@ -54,21 +68,32 @@ getMatchIdsByPUUID = async function (puuid) {
     }
 };
 
-getMatchIdsByPuuids = async function (puuids) {
-    const matchIds = await Promise.all(puuids.map(puuid => getMatchIdsByPUUID(puuid)));
-    return matchIds.flatMap(matchId => matchId);
+getMatchesByMatchIds = async function(matchIds) {
+    console.log(`==== Start getMatchesByMatchIds : ${matchIds} ====`);
+
+    const matches = await Promise.all(matchIds.map(id => getMatchById(id)));
+
+    console.log(`==== End getMatchesByMatchIds : ${matchIds} ====`);
+
+    return matches;
 };
 
-getMatchById = async function (matchId) {
+getMatchById = async function(matchId) {
+    console.log(`==== Start getMatchById : ${matchId} ====`);
+
     const match = await ApiDefault.asia.get(`/match/v1/matches/${matchId}`, headers);
+
+    console.log(`==== End getMatchById : ${matchId} ====`);
 
     return match.data;
 };
 
-getMatchesByMatchIds = async function (matchIds) {
-    const matches = await Promise.all(matchIds.map(id => getMatchById(id)));
-
-    return matches;
+delay = (minute) => {
+    return new Promise(resolve =>
+        setTimeout(() => {
+            resolve();
+        }, minute * 60 * 1000)
+    )
 };
 
 module.exports = {getTop100Users, getPUUIDsByUsers, getMatchIdsByPuuids, getMatchesByMatchIds};
