@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Col, Row} from "reactstrap";
+import { Col, Row } from "reactstrap";
 import UnitCard from "../components/UnitCard/UnitCard";
-import {api} from "../shared/http"
+import { api } from "../shared/http"
 
 class Dashboard extends React.Component {
     constructor(props) {
@@ -25,21 +25,24 @@ class Dashboard extends React.Component {
                 <Row>
                     {this.state.units.slice(0, 2).map((unit, index) =>
                         <Col xs="6">
-                            <UnitCard rank={index + 1} name={unit.name} tier={unit.tier} image={unit.image}/>
+                            <UnitCard rank={index + 1} name={unit.name} tier={unit.tier} image={unit.image}
+                                      class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>
                     )}
                 </Row>
                 <Row>
                     {this.state.units.slice(2, 6).map((unit, index) =>
                         <Col xs="3">
-                            <UnitCard rank={index + 3} name={unit.name} tier={unit.tier} image={unit.image}/>
+                            <UnitCard rank={index + 3} name={unit.name} tier={unit.tier} image={unit.image}
+                                      class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>
                     )}
                 </Row>
                 <Row>
                     {this.state.units.slice(6, 10).map((unit, index) =>
                         <Col xs="3">
-                            <UnitCard rank={index + 7} name={unit.name} tier={unit.tier} image={unit.image}/>
+                            <UnitCard rank={index + 7} name={unit.name} tier={unit.tier} image={unit.image}
+                                      class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>
                     )}
                 </Row>
