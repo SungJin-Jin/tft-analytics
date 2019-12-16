@@ -4,6 +4,6 @@ const analyticsCtrl = require('./analytics.ctrl');
 
 const analytics = new Router();
 
-analytics.post('/', analyticsCtrl.save);
+analytics.get('/', analyticsCtrl.process);
 
 module.exports = analytics;

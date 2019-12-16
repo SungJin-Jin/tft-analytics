@@ -3,7 +3,7 @@ const axios = require('axios');
 const ApiDefault = {
     koUrl: 'https://kr.api.riotgames.com/tft',
     asiaUrl: 'https://asia.api.riotgames.com/tft',
-    key: 'RGAPI-ea60c2f9-12e9-4104-8354-320594d413bf'
+    key: 'RGAPI-ac4276d8-538c-477f-ba51-2ad44d74347b'
 };
 
 ApiDefault.korea = axios.create({
