@@ -24,7 +24,7 @@ class Dashboard extends React.Component {
             <div className="content">
                 <Row>
                     {this.state.units.slice(0, 2).map((unit, index) =>
-                        <Col xs="6">
+                        <Col md="6">
                             <UnitCard rank={index + 1} name={unit.name} tier={unit.tier} image={unit.image}
                                       class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>
@@ -32,7 +32,7 @@ class Dashboard extends React.Component {
                 </Row>
                 <Row>
                     {this.state.units.slice(2, 6).map((unit, index) =>
-                        <Col xs="3">
+                        <Col md="3">
                             <UnitCard rank={index + 3} name={unit.name} tier={unit.tier} image={unit.image}
                                       class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>
@@ -40,7 +40,7 @@ class Dashboard extends React.Component {
                 </Row>
                 <Row>
                     {this.state.units.slice(6, 10).map((unit, index) =>
-                        <Col xs="3">
+                        <Col md="3">
                             <UnitCard rank={index + 7} name={unit.name} tier={unit.tier} image={unit.image}
                                       class={unit.class} origin={unit.origin} count={unit.count}/>
                         </Col>

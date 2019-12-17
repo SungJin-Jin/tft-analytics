@@ -7,9 +7,13 @@ exports.process = async(ctx) => {
     const puuids = await riot.getPUUIDsByUsers(topUsers);
     const matchIds = await riot.getMatchIdsByPuuids(puuids);
     const matches = await riot.getMatchesByMatchIds(matchIds);
+    const analyzedRecords = matchAnalytics.summaryUnits(matches);
 
+    console.log("====== Analyzed Records ======");
+    console.log(analyzedRecords);
+    
     const summary = new Summary({
-        summary: matchAnalytics.summaryUnits(matches),
+        summary: analyzedRecords,
         date: Date.now()
     });
 

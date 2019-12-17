@@ -14,28 +14,27 @@ ApiDefault.asia = axios.create({
     baseURL: ApiDefault.asiaUrl
 });
 
-const headers = {headers: {'X-Riot-Token': ApiDefault.key}}
+const headers = {headers: {'X-Riot-Token': ApiDefault.key}};
 
-getTop100Users = async function() {
+const getTop100Users = async () => {
     console.log(`========== getTop100Users ==========`);
 
     try {
         const challengers = await ApiDefault.korea.get(`/league/v1/challenger`, headers);
 
-        // TODO : slice 10 to 100
         return challengers.data.entries
             .sort((a, b) => b.leaguePoints - a.leaguePoints)
-            .slice(0, 10);
+            .slice(0, 100);
     } catch (e) {
         return [];
     }
 };
 
-getPUUIDsByUsers = async function(topUsers) {
+const getPUUIDsByUsers = async (topUsers) => {
     return await Promise.all(topUsers.map(user => getPUUIDBySummonerId(user.summonerId)));
 };
 
-getPUUIDBySummonerId = async function(encryptedSummonerId) {
+const getPUUIDBySummonerId = async (encryptedSummonerId) => {
     console.log(`==== getPUUIDBySummonerId : ${encryptedSummonerId} ====`);
 
     try {
@@ -47,7 +46,7 @@ getPUUIDBySummonerId = async function(encryptedSummonerId) {
     }
 };
 
-getMatchIdsByPuuids = async function(puuids) {
+const getMatchIdsByPuuids = async (puuids) => {
     console.log(`========== getMatchIdsByPuuids ==========`);
 
     const matchIds = await Promise.all(puuids.map(puuid => getMatchIdsByPUUID(puuid)));
@@ -55,11 +54,11 @@ getMatchIdsByPuuids = async function(puuids) {
     return matchIds.flatMap(matchId => matchId);
 };
 
-getMatchIdsByPUUID = async function(puuid) {
+const getMatchIdsByPUUID = async (puuid) => {
     console.log(`==== getMatchIdsByPUUID : ${puuid} ====`);
 
     try {
-        const count = 1;
+        const count = 20;
         const matchIds = await ApiDefault.asia.get(`/match/v1/matches/by-puuid/${puuid}/ids?count=${count}`, headers);
 
         return matchIds.data;
@@ -68,33 +67,32 @@ getMatchIdsByPUUID = async function(puuid) {
     }
 };
 
-getMatchesByMatchIds = async function(matchIds) {
+const getMatchesByMatchIds = async (matchIds) => {
     console.log(`==== Start getMatchesByMatchIds : ${matchIds} ====`);
 
-    const matches = await Promise.all(matchIds.map(id => getMatchById(id)));
+    let matches = [];
 
-    console.log(`==== End getMatchesByMatchIds : ${matchIds} ====`);
+    for (let index = 0; index <= matchIds.length - 1; index++) {
+        if (index % 20 === 0) await delay(0.5 * 60 * 1000);
+
+        const matchId = matchIds[index];
+        const match = await getMatchById(matchId);
+
+        matches.push(match);
+    }
 
     return matches;
 };
 
-getMatchById = async function(matchId) {
+const getMatchById = async function (matchId) {
     console.log(`==== Start getMatchById : ${matchId} ====`);
 
     const match = await ApiDefault.asia.get(`/match/v1/matches/${matchId}`, headers);
 
-    console.log(`==== End getMatchById : ${matchId} ====`);
-
     return match.data;
 };
 
-delay = (minute) => {
-    return new Promise(resolve =>
-        setTimeout(() => {
-            resolve();
-        }, minute * 60 * 1000)
-    )
-};
+const delay = time => new Promise(resolve => setTimeout(resolve, time));
 
 module.exports = {getTop100Users, getPUUIDsByUsers, getMatchIdsByPuuids, getMatchesByMatchIds};
 
