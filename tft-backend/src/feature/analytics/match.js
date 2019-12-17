@@ -8,6 +8,7 @@ const summaryTraits = (matches) => {
 
 const summaryByName = (units) => {
     return toSet(units.map(unit => unit.name))
+        .filter(name => name !== undefined && name !== "")
         .map(name => {
             return {
                 name: name,
