@@ -1,6 +1,9 @@
+import dotenv from 'dotenv';
 import axios from 'axios';
 
-const API_SERVER_URL = 'http://localhost:4000/api';
+dotenv.config();
+
+const API_SERVER_URL = process.env.REACT_APP_API_SERVER_URL;
 
 export const api = {
     get: (url) => {

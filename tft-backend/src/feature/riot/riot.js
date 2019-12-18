@@ -3,7 +3,7 @@ const axios = require('axios');
 const ApiDefault = {
     koUrl: 'https://kr.api.riotgames.com/tft',
     asiaUrl: 'https://asia.api.riotgames.com/tft',
-    key: 'RGAPI-ac4276d8-538c-477f-ba51-2ad44d74347b'
+    key: 'RGAPI-824231c7-8d90-477d-adb1-48a0306b4ccd'
 };
 
 ApiDefault.korea = axios.create({
@@ -24,14 +24,16 @@ const getTop100Users = async () => {
 
         return challengers.data.entries
             .sort((a, b) => b.leaguePoints - a.leaguePoints)
-            .slice(0, 100);
+            .slice(0, 50);
     } catch (e) {
         return [];
     }
 };
 
 const getPUUIDsByUsers = async (topUsers) => {
-    return await Promise.all(topUsers.map(user => getPUUIDBySummonerId(user.summonerId)));
+    return await Promise.all(topUsers
+        .filter(user => user.summonerId !== undefined && user.summonerId !== "")
+        .map(user => getPUUIDBySummonerId(user.summonerId)));
 };
 
 const getPUUIDBySummonerId = async (encryptedSummonerId) => {

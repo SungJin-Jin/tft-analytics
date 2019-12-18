@@ -10,6 +10,7 @@
     "chart.js": "^2.7.2",
     "classnames": "2.2.6",
     "compile-sass": "^1.0.3",
+    "dotenv": "^8.2.0",
     "history": "4.7.2",
     "node-sass": "4.12.0",
     "perfect-scrollbar": "1.4.0",
